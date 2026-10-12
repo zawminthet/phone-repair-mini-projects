@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step9 バリデーション</title>
+</head>
+<body>
+    <h1>修理受付フォーム</h1>
+    <form method="get">
+            <!--  OS: radio -->
+        <fieldset>
+            <legend>OS</legend>
+            <input type="radio" id="os-ios" name="os" value="ios" required>
+            <label for="os-ios">iOS</label>
+
+            <input type="radio" id="os-android" name="os" value="android">
+            <label for="os-android">Android</label>
+
+        </fieldset>
+
+                <!-- ② Brand: select -->
+        <div>
+            <label for="brand">ブランド</label>
+            <select id="brand" name="brand" required>
+                <option value="">選択してください</option>
+                <option value="apple">Apple</option>
+                <option value="samsung">Samsung</option>
+            </select>
+        </div>
+
+                <!-- ③ Model: select + optgroup -->
+        <div>
+            <label for="model">機種</label>
+            <select id="model" name="model" required>
+                <option value="">選択してください</option>
+                <optgroup label="Apple">
+                    <option value="iphone-15">iPhone 15</option>
+                    <option value="iphone-15-pro">iPhone 15 Pro</option>
+                </optgroup>
+                <optgroup label="Samsung">
+                    <option value="galaxy-s24">Galaxy S24</option>
+                    <option value="galaxy-s24-ultra">Galaxy S24 Ultra</option>
+                </optgroup>
+            </select>
+        </div>
+
+                <!-- ④ Symptoms: checkbox -->
+        <fieldset>
+            <legend>症状（複数選択可）</legend>
+
+            <input type="checkbox" id="symptom-screen-crack" name="symptoms[]" value="screen-crack">
+            <label for="symptom-screen-crack">画面割れ</label>
+
+            <input type="checkbox" id="symptom-no-charge" name="symptoms[]" value="no-charge">
+            <label for="symptom-no-charge">充電できない</label>
+
+            <input type="checkbox" id="symptom-battery-drain" name="symptoms[]" value="battery-drain">
+            <label for="symptom-battery-drain">バッテリーの減りが早い</label>
+
+            <input type="checkbox" id="symptom-no-sound" name="symptoms[]" value="no-sound">
+            <label for="symptom-no-sound">音が出ない</label>
+        </fieldset>
+
+                <!-- ⑤ Details: textarea -->
+        <div>
+            <label for="details">症状の詳細</label>
+            <textarea id="details" name="details" rows="4" maxlength="500" placeholder="例：3日前に落としてから、画面の右下が反応しない"></textarea>
+        </div>
+
+                <!-- ⑥ Contact: text + email -->
+        <fieldset>
+            <legend>連絡先</legend>
+
+            <div>
+                <label for="customer-name">お名前</label>
+                <input type="text" id="customer-name" name="customer_name" required maxlength="50">
+            </div>
+
+            <div>
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="phone">電話番号（ハイフンなし）</label>
+                <input type="tel" id="phone" name="phone" 
+                placeholder="例：09000000000" 
+                pattern="0[0-9]{9,10}" title="0から始まる10〜11桁の数字（ハイフンなし）">
+            </div>
+        </fieldset>
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>
