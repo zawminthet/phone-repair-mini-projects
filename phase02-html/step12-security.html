@@ -11,7 +11,7 @@
         <h1>修理受付フォーム</h1>
 
     <form method="post">
-            <!-- ① OS: radio -->
+        <!-- ① OS: radio -->
         <fieldset>
             <legend>OS</legend>
             <input type="radio" id="os-ios" name="os" value="ios" required>
@@ -22,7 +22,7 @@
 
         </fieldset>
 
-                <!-- ② Brand: select -->
+        <!-- ② Brand: select -->
         <div>
             <label for="brand">ブランド</label>
             <select id="brand" name="brand" required>
@@ -32,7 +32,7 @@
             </select>
         </div>
 
-                <!-- ③ Model: select + optgroup -->
+        <!-- ③ Model: select + optgroup -->
         <div>
             <label for="model">機種</label>
             <select id="model" name="model" required>
@@ -48,7 +48,7 @@
             </select>
         </div>
 
-                <!-- ④ Symptoms: checkbox -->
+        <!-- ④ Symptoms: checkbox -->
         <fieldset>
             <legend>症状（複数選択可）</legend>
 
@@ -65,13 +65,13 @@
             <label for="symptom-no-sound">音が出ない</label>
         </fieldset>
 
-                <!-- ⑤ Details: textarea -->
+        <!-- ⑤ Details: textarea -->
         <div>
             <label for="details">症状の詳細</label>
             <textarea id="details" name="details" rows="4" maxlength="500" placeholder="例：3日前に落としてから、画面の右下が反応しない"></textarea>
         </div>
 
-                <!-- ⑥ Contact: text + email -->
+        <!-- ⑥ Contact: text + email -->
         <fieldset>
             <legend>連絡先</legend>
 
@@ -94,7 +94,7 @@
         </fieldset>
         <button type="submit">送信</button>
     </form>
-        <!-- ⑦ Audio: スピーカーテスト -->
+    <!-- ⑦ Audio: スピーカーテスト -->
     <h2>スピーカーテスト</h2>
     <audio src="media/test-beep.wav" controls>
         お使いのブラウザは音声の再生に対応していません。
